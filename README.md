@@ -1,4 +1,4 @@
-# terraform-aws-namespace-roles
+# terraform-aws-namespace-ops-roles
 ## Requirements
 
 No requirements.
