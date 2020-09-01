@@ -39,7 +39,7 @@ variable "cidr_restrictions" {
 
 locals {
   prefix      = "${lower(var.prefix)}"
-  namespace = "${lower(var.namespace)}"
+  namespace   = "${lower(var.namespace)}"
   policy_path = "/${local.prefix}/${local.namespace}/"
 
   required_tags = "${map(

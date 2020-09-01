@@ -20,7 +20,7 @@ resource "aws_iam_role_policy_attachment" "attach_system_administrator" {
   role       = "${aws_iam_role.namespace_devops_role.name}"
 }
 
-resource "aws_iam_role_policy_attachment" "attach_system_administrator" {
+resource "aws_iam_role_policy_attachment" "attach_database_administrator" {
   policy_arn = "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator"
   role       = "${aws_iam_role.namespace_devops_role.name}"
 }
