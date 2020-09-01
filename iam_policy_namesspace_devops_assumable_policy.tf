@@ -9,7 +9,7 @@ data "aws_iam_policy_document" "namespace_devops_role_assumable_document" {
 
     condition {
       test     = "StringEqualsIgnoreCase"
-      values   = ["${var.namespace}"]
+      values   = ["${local.namespace}"]
       variable = "iam:ResourceTag/${var.namespace_tag_key}"
     }
 
@@ -46,7 +46,7 @@ data "aws_iam_policy_document" "namespace_devops_role_assumable_document" {
 }
 
 resource "aws_iam_policy" "devops_role_assumable_policy" {
-  name   = "${local.prefix}-${var.namespace}-devops-assumable-role"
+  name   = "${local.prefix}-${local.namespace}-devops-assumable-role"
   path   = "${local.policy_path}"
   policy = "${data.aws_iam_policy_document.namespace_devops_role_assumable_document.json}"
 }

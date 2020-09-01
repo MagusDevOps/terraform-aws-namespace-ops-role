@@ -3,9 +3,9 @@ output "grant_assumable_policy_arn" {
 }
 
 output "assumable_role_name" {
-  value = "${aws_iam_role.namespace_devops_roles.name}"
+  value = "${aws_iam_role.namespace_devops_role.name}"
 }
 
 output "assumable_role_arn" {
-  value = "${aws_iam_role.namespace_devops_roles.arn}"
+  value = "${aws_iam_role.namespace_devops_role.arn}"
 }

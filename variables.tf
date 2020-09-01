@@ -39,11 +39,12 @@ variable "cidr_restrictions" {
 
 locals {
   prefix      = "${lower(var.prefix)}"
-  policy_path = "/${local.prefix}/${var.namespace}/"
+  namespace = "${lower(var.namespace)}"
+  policy_path = "/${local.prefix}/${local.namespace}/"
 
   required_tags = "${map(
     var.prefix_tag_key, local.prefix,
-    var.namespace_tag_key, var.namespace
+    var.namespace_tag_key, local.namespace
   )}"
 
   tags = "${merge(var.additional_tags, local.required_tags)}"
