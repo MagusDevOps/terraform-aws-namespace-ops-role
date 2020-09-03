@@ -1,4 +1,15 @@
 # terraform-aws-namespace-ops-roles
+
+## Usage
+```HCL
+module "namespace-ops-role" {
+  source            = "MagusDevOps/namespace-ops-role/aws"
+  version           = "x.x.x"
+  account_id        = "${var.account_id}"
+  ...
+}
+```
+
 ## Requirements
 
 No requirements.

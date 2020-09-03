@@ -1,12 +1,7 @@
 data "aws_iam_policy_document" "deny_other_namespaces_policy_document" {
   statement {
-    effect = "Deny"
-
-    not_actions = [
-      "iam:GetAccountPasswordPolicy",
-      "iam:ChangePassword",
-    ]
-
+    effect    = "Deny"
+    actions   = ["*"]
     resources = ["*"]
 
     condition {
