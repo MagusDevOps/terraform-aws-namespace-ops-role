@@ -88,9 +88,9 @@ Default: `"environment"`
 
 The following outputs are exported:
 
-### assumable\_role\_arn
+### role\_arn
 
-### assumable\_role\_name
+### role\_name
 
 ### grant\_assumable\_policy\_arn
 
